@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labb6_OOP_Arv
 {
-    class Animal // Klassen för de djuren som delar samma egenskaper
+    public abstract class Animal // Klassen för de djuren som delar samma egenskaper
     { // De olika propertys som används för att lagra och hämta information
         public string _speed { get; set; }
         public string _food { get; set; }
@@ -22,10 +22,8 @@ namespace Labb6_OOP_Arv
             _breed = breed;
             _size = size;
         }
-        public virtual void MakeSound() // Den gemensamma metoden för alla djur
-        {
-            Console.WriteLine("{0} låter:", _breed);
-        }
+        public abstract void MakeSound(); // Den gemensamma metoden för alla djur
+
         // Virtual metod för att kunna skriva om metoden för varje klass
         public virtual void SameInfo()
         {
