@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Labb6_OOP_Arv
 {
-    class Plants // Skapar en basklass Plants
+   public abstract class Plants // Skapar en basklass Plants
     {
-        //De olika propertys som tilldelas
+        //De olika propertys som används
         public string _art { get; set; }
         public int _lenght { get; set; }
         public string _watering { get; set; }
@@ -16,15 +16,12 @@ namespace Labb6_OOP_Arv
 
         public Plants(string art, int lenght, string watering, string climate) //Konstruktorn som tar emot fyra parametrar
         {
-            //Tilldelar värderna av parametrrarna
+            //Tilldelar värderna av parametrarna
             _art = art;
             _lenght = lenght;
             _watering = watering;
             _climate = climate;
         }
-        public virtual void PlantInfo()
-        {
-            Console.WriteLine("Information om växterna");
-        }
+        public abstract void PlantInfo(); // Abstakt metod för att skriva ut unik information om växterna
     }
 }

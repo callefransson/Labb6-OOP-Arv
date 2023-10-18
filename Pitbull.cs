@@ -11,7 +11,7 @@ namespace Labb6_OOP_Arv
         //Specifika egenskapen för klassen Pitbull
         public bool _isProtecting { get; set; }
         public Pitbull(string speed, string food, int legs, string breed, string size, bool isProtecting) : base(speed, food, legs, breed, size, isProtecting)
-        {// Tilldelar värdet på parametern
+        {// Tilldelar värdet på propertyn
             _isProtecting = isProtecting;
         }
         public override void SpecificProperty() //Specifika egenskapen för klassen Pitbull

@@ -8,9 +8,10 @@ namespace Labb6_OOP_Arv
 {
     class GoldenRetriver : Animal //Skapar en ny klass GoldenRetriver som ärver ifrån basklassen Animal
     {
+        //specifika propertyn för klassen
         public bool _isHappy { get; set; }
 
-        //Konstrukron som lagarar två nya egenskaper för klassen och använder base för att hämta dem gemensamma egenskaperna 
+        //Konstrukron som lagarar en ny egenskap för klassen och använder base för att hämta dem gemensamma egenskaperna 
         public GoldenRetriver(string speed, string food, int legs, string breed, string size, bool isHappy) : base(speed, food, legs, breed, size)
         {// tilldelar värdet på parametern
             _isHappy = isHappy;

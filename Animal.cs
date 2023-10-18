@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Labb6_OOP_Arv
 {
     public abstract class Animal // Klassen för de djuren som delar samma egenskaper
-    { // De olika propertys som används för att lagra och hämta information
+    { // De olika propertys som används för alla klasserna
         public string _speed { get; set; }
         public string _food { get; set; }
         public int _legs { get; set; }
@@ -22,27 +22,19 @@ namespace Labb6_OOP_Arv
             _breed = breed;
             _size = size;
         }
-        public abstract void MakeSound(); // Den gemensamma metoden för alla djur
+        public abstract void MakeSound(); // Den gemensamma metoden för alla klasser
+        public abstract void SameInfo();
+        public abstract void SpecificProperty(); //abstrakt metod för alla klassen som ärver från Animal klassen
 
-        // Virtual metod för att kunna skriva om metoden för varje klass
-        public virtual void SameInfo()
-        {
-            Console.WriteLine("Informationen om djuren");
-        }
-        public virtual void SpecificProperty()
-        {
-            Console.WriteLine("Den unika metoden för alla klasser");
-        }
-
-        public virtual void TameAnimals()
+        public virtual void TameAnimals() //Metod för att skriva ut dom tama djuren
         {
             Console.WriteLine("De tama djuren");
         }
-        public virtual void WildAnimals()
+        public virtual void WildAnimals() //Metod för att skriva ut dom vilda djuren
         {
             Console.WriteLine("De vilda djuren");
         }
-        public virtual void IsMammal()
+        public virtual void IsMammal() //Metod om djuret är ett däggdjur eller inte
         {
             Console.WriteLine("Om djuren är däggdjur eller inte");
         }
